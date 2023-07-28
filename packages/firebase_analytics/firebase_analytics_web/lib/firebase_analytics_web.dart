@@ -142,4 +142,11 @@ class FirebaseAnalyticsWeb extends FirebaseAnalyticsPlatform {
       'getAppInstanceId() is not supported on web',
     );
   }
+
+  @override
+  Future<int?> getSessionId() async {
+    throw UnimplementedError(
+      'getSessionId() is not supported on web',
+    );
+  }
 }

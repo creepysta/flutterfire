@@ -72,6 +72,8 @@ NSString *const FLTFirebaseAnalyticsChannelName = @"plugins.flutter.io/firebase_
     [self setDefaultEventParameters:call.arguments withMethodCallResult:methodCallResult];
   } else if ([@"Analytics#getAppInstanceId" isEqualToString:call.method]) {
     [self getAppInstanceIdWithMethodCallResult:methodCallResult];
+  } else if ([@"Analytics#getSessionId" isEqualToNumber:call.method]) {
+    [self getSessionIdWithMethodCallResult:methodCallResult];
   } else {
     result(FlutterMethodNotImplemented);
   }
@@ -147,6 +149,11 @@ NSString *const FLTFirebaseAnalyticsChannelName = @"plugins.flutter.io/firebase_
 - (void)getAppInstanceIdWithMethodCallResult:(FLTFirebaseMethodCallResult *)result {
   NSString *appInstanceID = [FIRAnalytics appInstanceID];
   result.success(appInstanceID);
+}
+
+- (void)getSessionIdWithMethodCallResult:(FLTFirebaseMethodCallResult *)result {
+  NSString *sessionID = [FIRAnalytics sessionID];
+  result.success(sessionID);
 }
 
 #pragma mark - FLTFirebasePlugin

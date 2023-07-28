@@ -245,4 +245,13 @@ class MockFirebaseAnalyticsWeb extends _i1.Mock
         returnValue: _i5.Future<String?>.value(),
         returnValueForMissingStub: _i5.Future<String?>.value(),
       ) as _i5.Future<String?>);
+  @override
+  _i5.Future<int?> getSessionId() => (super.noSuchMethod(
+        Invocation.method(
+          #getSessionId,
+          [],
+        ),
+        returnValue: _i5.Future<int?>.value(),
+        returnValueForMissingStub: _i5.Future<int?>.value(),
+      ) as _i5.Future<int?>);
 }

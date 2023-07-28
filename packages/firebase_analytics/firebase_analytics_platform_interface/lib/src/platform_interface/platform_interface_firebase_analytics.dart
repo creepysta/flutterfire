@@ -74,6 +74,11 @@ abstract class FirebaseAnalyticsPlatform extends PlatformInterface {
     throw UnimplementedError('getAppInstanceId() is not implemented');
   }
 
+  /// Retrieves the app instance id from the service.
+  Future<int?> getSessionId() {
+    throw UnimplementedError('getSessionId() is not implemented');
+  }
+
   /// Logs a custom Flutter Analytics event with the given [name] and event
   /// [parameters].
   ///

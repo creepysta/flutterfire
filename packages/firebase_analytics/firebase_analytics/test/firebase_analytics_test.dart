@@ -1208,6 +1208,19 @@ void main() {
           ],
         );
       });
+
+      test('sessionId', () async {
+        var _ = await analytics!.sessionId;
+        expect(
+          methodCallLog,
+          <Matcher>[
+            isMethodCall(
+              'Analytics#getSessionId',
+              arguments: null,
+            )
+          ],
+        );
+      });
     });
   });
 }

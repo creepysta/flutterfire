@@ -75,6 +75,12 @@ class FirebaseAnalytics extends FirebasePluginPlatform {
     return _delegate.getAppInstanceId();
   }
 
+  /// Retrieves the analytics session id from the service, or null if consent has
+  /// been denied.
+  Future<int?> get sessionId {
+    return _delegate.getSessionId();
+  }
+
   /// Logs a custom Flutter Analytics event with the given [name] and event
   /// [parameters].
   ///
